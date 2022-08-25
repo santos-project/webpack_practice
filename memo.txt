@@ -1,0 +1,41 @@
+[パッケージ]
+
+clean-webpack-plugin
+css-loader　//cssのコンパイルに必要
+file-loader　//webpack5から必要ない
+html-loader　//pugのコンパイルに必要
+html-webpack-plugin　//htmlのコンパイルに必要
+mini-css-extract-plugin　//cssのコンパイルに必要
+pug-html-loader　//pugのコンパイルに必要
+style-loader　//cssのコンパイルに必要
+url-loader　//webpack5から必要ない
+webpack
+webpack-cli
+webpack-dev-server
+
+
+[よく使うコマンド]
+
+open -a "Google Chrome" ./dist/index.html　//vscodeからファイルを開く方法
+
+npm view パッケージ名　//パッケージのバージョンを確認
+npm install --save-dev パッケージ名@バージョン　//インストール方法
+
+npx webpack --mode development　//dev環境でのビルド・コンパイル方法
+npx webpack --mode production　//本番環境でのビルド・コンパイル方法
+
+npx webpack-dev-server　//ローカル環境でサーバを立ち上げる時に使用　"npm run dev"みたいなもの
+
+[エラー]
+
+_menu.pugの中身のインデントを一番左端にすること
+
+ルートパス（_menu.pug内のa(href="")のとき）を使用するときは　./ ではなく / から
+  ->ただ、distを生成するときはルートパスが使用できないので ./ など相対パスにする必要がある
+
+[webpack5を使う時]
+
+npx webpack server --mode=development
+
+[トランスパイル]
+トランスパイルとは、あるプログラミング言語から、他のプログラミング言語に変換するという技術で、ここではES6以降のJavaScriptをそれ以前のものに変換することをいいます。
