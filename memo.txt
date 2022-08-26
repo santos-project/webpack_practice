@@ -16,7 +16,8 @@ sass or node-sass　//sassのコンパイルに必要
 sass-loader　//sassのコンパイルに必要
 @babel/core　//ES6からES5へ変換に必要
 @babel/preset-env　//ES6からES5へ変換に必要
-babel-loader"　//ES6からES5へ変換に必要
+babel-loader　//ES6からES5へ変換に必要
+image-webpack-loader　//画像を自動で圧縮する
 
 
 [よく使うコマンド]
@@ -33,6 +34,7 @@ npx webpack --mode production　//本番環境でのビルド・コンパイル�
 npx webpack-dev-server　//ローカル環境でサーバを立ち上げる時に使用　"npm run dev"みたいなもの
 ※ package.json内の scriptsに "start": "webpack-dev-server"を設定すると "npm start" でビルドできる
 
+
 [エラー]
 
 loaderは下から順に読み込まれる
@@ -42,9 +44,11 @@ _menu.pugの中身のインデントを一番左端にすること
 ルートパス（_menu.pug内のa(href="")のとき）を使用するときは　./ ではなく / から
   ->ただ、distを生成するときはルートパスが使用できないので ./ など相対パスにする必要がある
 
+
 [webpack5を使う時]
 
 npx webpack server --mode=development
+
 
 [トランスパイル]
 トランスパイルとは、あるプログラミング言語から、他のプログラミング言語に変換するという技術で、ここではES6以降のJavaScriptをそれ以前のものに変換することをいいます。
