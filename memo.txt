@@ -12,6 +12,8 @@ url-loader　//webpack5から必要ない
 webpack
 webpack-cli
 webpack-dev-server
+sass or node-sass
+sass-loader
 
 
 [よく使うコマンド]
@@ -27,6 +29,8 @@ npx webpack --mode production　//本番環境でのビルド・コンパイル�
 npx webpack-dev-server　//ローカル環境でサーバを立ち上げる時に使用　"npm run dev"みたいなもの
 
 [エラー]
+
+loaderは下から順に読み込まれる
 
 _menu.pugの中身のインデントを一番左端にすること
 
