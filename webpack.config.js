@@ -1,5 +1,5 @@
 const path = require("path");
-const MiniCssExtractPligin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
@@ -38,7 +38,7 @@ module.exports = {
         test: /\.(css|sass|scss)/,
         use: [
           {
-            loader: MiniCssExtractPligin.loader,
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: "css-loader",
@@ -88,7 +88,7 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new MiniCssExtractPligin({
+    new MiniCssExtractPlugin({
       filename: "./stylesheets/[name]-[hash].css",
     }),
     new HtmlWebpackPlugin({
